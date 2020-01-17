@@ -1,8 +1,7 @@
 
 $('Document').ready(function () {
-    
     $(window).scroll(function () {
-      canLoad = true;
+         canLoad = true;
         if ($(window).scrollTop() + window.innerHeight >= document.body.scrollHeight - 600) {
             if (canLoad) {
                 canLoad = false;
@@ -14,13 +13,10 @@ $('Document').ready(function () {
                     type: "post",
                     data: {ID: nb},
                     success: function (resp) {
-                        if (resp.length > 320) {
                             $("#all").append(resp);
                             canLoad = true;
                             $("#load").addClass("loading");
-                        }else{
-                            $("#load").addClass("loading");
-                        };
+                       
                     },
                 });
                 // ajax call get data from server and append to the div

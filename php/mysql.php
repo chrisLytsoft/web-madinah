@@ -2,9 +2,9 @@
 
 class sql {
 
-	private $servername = "mysql:host=localhost;dbname=media";
-	private $username = "root";
-	private $password = "3393083";
+	private $servername = "mysql:host=sql.chrilantech.com;dbname=media";
+	private $username = "admin";
+	private $password = "Dickerlouise&1";
 	private $conn;
 	function __construct()
 	{
