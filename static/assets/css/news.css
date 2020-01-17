@@ -1,0 +1,106 @@
+
+        .newsNav {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            z-index: 999;
+
+        }
+
+        .ActiveSub {
+            border-bottom: 4px solid #009899;
+            margin-bottom: 0;
+        }
+
+        .box {
+            height: 31px;
+            background-color: black;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+        .box::-webkit-scrollbar {
+            display: none;
+        }
+
+        .box-a {
+            height: 70%;
+            padding-top: 5PX;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: black;
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        .box-a:hover {
+            border-bottom: 4px solid white;
+            margin-bottom: 0;
+        }
+
+        .artfoot {
+            font-family: "Helvetica Neue";
+            color: #b8b6b5;
+            font-size: 13px;
+
+        }
+
+        .box-a h3 {
+            font-family: "Helvetica Neue";
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            margin-bottom: 1px;
+        }
+
+        .loading {
+            display: none;
+        }
+
+
+        @media (max-width: 700px) {
+            .newsI {
+                height: 80px;
+                width: 120px;
+            }
+
+
+            h4 {
+
+                font-family: "Helvetica Neue";
+                font-size: 14px;
+                font-weight: bold;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .maindiv {
+                cursor: pointer;
+                height: 85px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                overflow: hidden;
+            }
+
+        }
+
+        @media (min-width: 700px) {
+            .maindiv {
+                cursor: pointer;
+                height: 200px;
+                padding: 6px;
+            }
+
+            .newsI {
+                height: 180px;
+                width: 220px;
+            }
+
+
+        }
+
+
+   

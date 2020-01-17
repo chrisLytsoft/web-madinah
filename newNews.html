@@ -1,0 +1,60 @@
+
+        <div class="row">
+            <div class="maindiv col-12 col-md-6" id="nn{{ row[0][0] }}">
+                <img class = "newsI" src="{{ row[0][1] }}" style="margin-right: 7px;float: left;" height="200px" width="200px">
+                <div class="">
+                    <h4>{{ row[0][2] }}</h4>
+                    <p style="color: #009899;font-family: Nexa;font-weight: bold;font-size: 10px;text-align: left">Read
+                        More</p>
+                </div>
+
+            </div>
+            <div class="maindiv col-12 col-md-6" id="nn{{ row[1][0] }}">
+                <img class = "newsI" src="{{ row[1][1] }}" style="margin-right: 7px;float: left;" height="200px" width="200px">
+                <div class="">
+                    <h4>{{ row[1][2] }}</h4>
+                   <p style="color: #009899;font-family: Nexa;font-weight: bold;font-size: 10px;text-align: left">Read
+                        More</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="maindiv col-12 col-md-6" id="nn{{ row[2][0] }}">
+                <img class = "newsI" src="{{ row[2][1] }}" style="margin-right: 7px;float: left;" height="200px" width="200px">
+                <div class="">
+                    <h4>{{ row[2][2] }}</h4>
+                    <p style="color: #009899;font-family: Nexa;font-weight: bold;font-size: 10px;text-align: left">Read
+                        More</p>
+                </div>
+            </div>
+            <div class="maindiv col-12 col-md-6" id="nn{{ row[0][0] }}">
+                <img class = "newsI" src="{{ row[3][1] }}" style="margin-right: 7px;float: left;" height="200px" width="200px">
+                <div class="">
+                    <h4>{{ row[3][2] }}</h4>
+                    <p style="color: #009899;font-family: Nexa;font-weight: bold;font-size: 10px;text-align: left">Read
+                        More</p>
+
+                </div>
+
+            </div>
+        </div>
+        <script>
+            $("div#nn{{ row[0][0] }}").click(
+               function pageRedirect() {
+                 window.location.href = "/news/story?story={{ row[0][0] }}";
+            })
+            $("div#nn{{ row[1][0] }}").click(
+                function pageRedirect() {
+                    window.location.href = "/news/story?story={{ row[1][0] }}";
+                })
+            $("div#nn{{ row[2][0] }}").click(
+                function pageRedirect() {
+                    window.location.href = "/news/story?story={{ row[2][0] }}";
+                })
+            $("div#nn{{ row[3][0] }}").click(
+                function pageRedirect() {
+                    window.location.href = "/news/story?story={{ row[3][0] }}";
+                })
+
+</script>
