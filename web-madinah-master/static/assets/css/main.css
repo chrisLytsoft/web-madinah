@@ -1,0 +1,231 @@
+
+@media (max-width: 700px) {
+    .pclass {
+        font-family: "Helvetica Neue";
+        font-weight: bold;
+        color: black;
+        line-height: 100%;
+    }
+    #Desktop {
+        display: none;
+    }
+
+    #NavLogo {
+        padding-top: 5px;
+        margin-right: 5px;
+        margin-left: 28px;
+        margin-right: 28px;
+        height: 60px;
+        width: 60px;
+    }
+
+    #host {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 120px;
+        display: inline-block;
+        margin-top: 2px
+    }
+
+    #showLogo {
+
+        height: 56px;
+        width: 56px;
+    }
+    #headofpage{
+        background-color: #e6e6e6;
+
+    }
+    #navBarMain{
+        background-color: #e6e6e6;
+    }
+}
+
+
+
+.navCus {
+    margin-bottom: 0px;
+}
+
+.navCus p {
+    margin-bottom: 0px;
+}
+
+@media (min-width: 700px) {
+    #NavLogo {
+        float: right;
+    }
+    .pclass {
+        font-family: "Helvetica Neue";
+        font-weight: bold;
+        color: white;
+        line-height: 100%;
+    }
+
+    #host {
+        padding-left: 4px;
+        padding-top: 2px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-repeat: no-repeat;
+        background-size: 320px 150px;
+        width: 320px;
+        Height: 150px;
+        display: inline-block;
+    }
+
+    .Mobile {
+        display: none;
+
+    }
+
+    #NavLogo {
+        padding-right: 30px;
+        height: 150px;
+        width: 150px;
+    }
+    #navBarMain{
+        background-color: #009899;
+    }
+    #headofpage{
+        background-color: #009899;
+
+    }
+    #Desktop{
+        background-color: #e6e6e6;
+
+    }
+
+
+
+
+}
+
+.navCus:hover {
+    background-color: darkgreen;
+}
+
+.Active {
+    border-bottom: 3px solid white;
+}
+
+   .newsNav1 {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            z-index: 999;
+
+        }
+
+        .ActiveSub {
+            border-bottom: 4px solid #009899;
+            margin-bottom: 0;
+        }
+
+        .box1 {
+            height: 31px;
+            background-color: black;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+        .box1::-webkit-scrollbar {
+            display: none;
+        }
+
+        .box-a1 {
+            height: 70%;
+            padding-top: 5PX;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: black;
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        .box-a1:hover {
+            border-bottom: 4px solid white;
+            margin-bottom: 0;
+        }
+
+        .box-a1 h3 {
+            font-family: "Nexa";
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            margin-bottom: 1px;
+        }
+
+        @media (max-width: 700px) {
+            #TradeMark{
+                font-size: 8px;
+            }
+            .imga {
+                height: 80px;
+                width: 120px;
+            }
+
+            h4 {
+
+                font-family: "Nexa";
+                font-size: 14px;
+                font-weight: bold;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .maindiv {
+                cursor: pointer;
+                height: 85px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                overflow: hidden;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .maindiv {
+                cursor: pointer;
+                height: 200px;
+                padding: 6px;
+            }
+
+            .imga {
+                height: 180px;
+                width: 220px;
+            }
+
+
+        }
+
+        p{
+           font-family: "Helvetica Neue";
+            
+        }
+
+    .box {
+                height: 250px;
+                margin-top: 0px;
+                margin-bottom: 22px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+
+            .box::-webkit-scrollbar {
+                display: none;
+            }
+
+            .box-a {
+                height: 100%;
+                width: 250px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                padding-left: 10px;
+                padding-right: 10px;
+                display: inline-block;
+
+            }

@@ -1,0 +1,222 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+    <body>
+    <nav class="newsNav">
+        <div class="box">
+            <div class="container">
+                <div id="news1" class="box-a">
+                    <h3>All Videos</h3>
+                </div>
+                <div id="news2" class="box-a">
+                    <h3>Headlines</h3>
+                </div>
+                <div id="news3" class="box-a">
+                    <h3>Other Videos</h3>
+                </div>
+                <div id="news4" class="box-a">
+                    <h3>Outside Videos</h3>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <div>
+        <div class="container" style="height: 300px">
+            <img src="/static/background.jpg" height="100%" width="100%">
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div id="all">
+
+        </div>
+    </div>
+    </body>
+    <style>
+        .Hide{
+            display: none;
+        }
+        .newsNav {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            z-index: 999;
+
+        }
+
+        .ActiveSub {
+            border-bottom: 4px solid #009899;
+            margin-bottom: 0;
+        }
+
+        .box {
+            height: 31px;
+            background-color: black;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+        .box::-webkit-scrollbar {
+            display: none;
+        }
+
+        .box-a {
+            height: 70%;
+            padding-top: 5PX;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: black;
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        .box-a:hover {
+            border-bottom: 4px solid white;
+            margin-bottom: 0;
+        }
+
+
+
+        .box-a h3 {
+            font-family: "Helvetica Neue";
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            margin-bottom: 1px;
+        }
+
+    </style>>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/1.0.5/jquery.mobile-events.js"></script>
+    <script>
+
+        $("#nav3").addClass( "Active" );
+        $(document.body).on('touchmove', onScroll); // for mobile
+        $(window).on('scroll', onScroll);
+        var nb = $(".tvDiv").length;
+        var pathname = window.location.pathname;
+        var ID = {"ID": 0,"Path": pathname};
+        $.ajax({
+            url: '/newTV',
+            type: "post",
+            data: JSON.stringify({ID}),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (resp) {
+                $("#all").append(resp.suc);
+                canLoad = true;
+            }
+        });
+        var nb = $(".tvDiv").length;
+        var pathname = window.location.pathname;
+        var ID = {"ID": 4,"Path": pathname};
+        $.ajax({
+            url: '/newTV',
+            type: "post",
+            data: JSON.stringify({ID}),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (resp) {
+                $("#all").append(resp.suc);
+                canLoad = true;
+            }
+        });
+
+        var nb = $(".tvDiv").length;
+        var pathname = window.location.pathname;
+        var ID = {"ID": 8,"Path": pathname};
+        $.ajax({
+            url: '/newTV',
+            type: "post",
+            data: JSON.stringify({ID}),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (resp) {
+                $("#all").append(resp.suc);
+                canLoad = true;
+            }
+        });
+
+        function onScroll() {
+            if ($(window).scrollTop() + window.innerHeight >= document.body.scrollHeight - 600) {
+                if (canLoad) {
+                    canLoad = false;
+                    var pathname = window.location.pathname;
+                    var nb = $(".tvDiv").length;
+                    var ID = {"ID": nb, "Path": pathname};
+                    $.ajax({
+                        url: '/newTV',
+                        type: "post",
+                        data: JSON.stringify({ID}),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (resp) {
+                            $("#all").append(resp.suc);
+                            canLoad = true;
+                        }
+                    });
+                }
+                // ajax call get data from server and append to the div
+            }
+        }
+         $(document).ready(function () {
+            var pathname = window.location.pathname;
+
+            if (pathname == "/TV") {
+                $("#news1").addClass("ActiveSub");
+                $("#news2").removeClass("ActiveSub");
+                $("#news3").removeClass("ActiveSub");
+                $("#news4").removeClass("ActiveSub");
+            }
+            if (pathname == "/TV/Headlines") {
+
+                $("#news2").addClass("ActiveSub");
+                $("#news1").removeClass("ActiveSub");
+                $("#news3").removeClass("ActiveSub");
+                $("#news4").removeClass("ActiveSub");
+            }
+            if (pathname == "/TV/Other") {
+
+                $("#news3").addClass("ActiveSub");
+                $("#news2").removeClass("ActiveSub");
+                $("#news1").removeClass("ActiveSub");
+                $("#news4").removeClass("ActiveSub");
+            }
+            if (pathname == "/TV/Outside") {
+
+                $("#news4").addClass("ActiveSub");
+                $("#news2").removeClass("ActiveSub");
+                $("#news3").removeClass("ActiveSub");
+                $("#news1").removeClass("ActiveSub");
+            }
+
+        });
+         $(document).ready(function () {
+
+
+             $("div#news1").click(
+                 function pageRedirect() {
+                     window.location.href = "/TV";
+                 })
+             $("div#news2").click(
+                 function pageRedirect() {
+                     window.location.href = "/TV/Headlines";
+                 })
+             $("div#news3").click(
+                 function pageRedirect() {
+                     window.location.href = "/TV/Other";
+                 })
+             $("div#news4").click(
+                 function pageRedirect() {
+                     window.location.href = "/TV/Outside";
+                 })
+         });
+
+    </script>
+{% endblock %}
