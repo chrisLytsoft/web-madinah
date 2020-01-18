@@ -1,0 +1,43 @@
+<style>
+    .tvDiv h1{
+            font-family: "Helvetica Neue";
+            font-size: 20px;
+            font-weight: bold;
+    }
+</style>
+<link rel="preconnect" href="https://youtube.com">
+<link rel="preload" href="https://www.youtube.com/embed/{{ row[0][1] }}" as="document">
+<link rel="preload" href="https://www.youtube.com/embed/{{ row[1][1] }}" as="document">
+<link rel="preload" href="https://www.youtube.com/embed/{{ row[2][1] }}" as="document">
+<link rel="preload" href="https://www.youtube.com/embed/{{ row[3][1] }}" as="document">
+
+<div class="row">
+    <div class="tvDiv col-12 col-md-3">
+        <h1>{{ row[0][2] }}</h1>
+        <iframe width="100%" height="220vw" src="https://www.youtube.com/embed/{{ row[0][1] }}" frameborder="0"
+                llow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            {{ row[0][2] }}</iframe>
+        <p>{{ row[0][3] }}</p>
+    </div>
+    <div class="tvDiv col-12 col-md-3">
+        <h1>{{ row[1][2] }}</h1>
+        <iframe  width="100%" height="220vw" src="https://www.youtube.com/embed/{{ row[1][1] }}" frameborder="0"
+                llow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            {{ row[1][2] }}</iframe>
+        <p>{{ row[1][3] }}</p>
+    </div>
+    <div class="tvDiv col-12 col-md-3">
+        <h1>{{ row[2][2] }}</h1>
+        <iframe  width="100%" height="220vw" src="https://www.youtube.com/embed/{{ row[2][1] }}" frameborder="0"
+                llow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            {{ row[2][2] }}</iframe>
+        <p>{{ row[2][3] }}</p>
+    </div>
+    <div class="tvDiv col-12 col-md-3">
+        <h1>{{ row[3][2] }}</h1>
+        <iframe  width="100%" height="220vw" src="https://www.youtube.com/embed/{{ row[3][1] }}" frameborder="0"
+                llow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            {{ row[3][2] }}</iframe>
+        <p>{{ row[3][3] }}</p>
+    </div>
+</div>
